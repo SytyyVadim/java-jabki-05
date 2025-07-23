@@ -4,7 +4,7 @@ public class Game {
     private final int secretNumber;
 
     public Game() {
-        this.secretNumber = new Random().nextInt(100) + 1;
+        this.secretNumber = new Random().nextInt(101);
     }
 
     public String checkGuess(int guess) {
