@@ -28,9 +28,13 @@ public class Wallet {
     }
 
     public void spend(int amount) {
+        if (amount <= 0) {
+            System.out.println("Сумма должна быть положительной.");
+            return;
+        }
         int total = amount + calculateFee(amount);
-        if (total <= money) {
-            money -= total;
+        if (total <= this.money) {
+            this.money -= total;
         } else {
             System.out.println("Недостаточно средств.");
         }

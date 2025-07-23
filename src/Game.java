@@ -1,16 +1,16 @@
 import java.util.Random;
 
 public class Game {
-    private int secretNumber;
+    private final int secretNumber;
 
     public Game() {
         this.secretNumber = new Random().nextInt(100) + 1;
     }
 
     public String checkGuess(int guess) {
-        if (guess < secretNumber) {
+        if (guess < this.secretNumber) {
             return "Больше";
-        } else if (guess > secretNumber) {
+        } else if (guess > this.secretNumber) {
             return "Меньше";
         } else {
             return "Угадал";

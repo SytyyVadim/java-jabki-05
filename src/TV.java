@@ -24,18 +24,18 @@ public class TV {
     }
 
     public int getVolume() {
-        return volume;
+        return this.volume;
     }
 
     public int getCurrentChannel() {
-        return currentChannel;
+        return this.currentChannel;
     }
 
     public void nextChannel() {
-        if (currentChannel < 50) {
-            currentChannel++;
+        if (this.currentChannel < 50) {
+            this.currentChannel++;
         } else {
-            currentChannel = 1;
+            this.currentChannel = 1;
         }
     }
 }
