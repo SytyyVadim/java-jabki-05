@@ -40,7 +40,7 @@ public class Wallet {
         }
     }
 
-    protected int calculateFee(int amount) {
+    private int calculateFee(int amount) {
         return (int) (amount * 0.05); // 5% комиссия
     }
 }

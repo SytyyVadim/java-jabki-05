@@ -12,9 +12,8 @@ public class Game {
             return "Больше";
         } else if (guess > this.secretNumber) {
             return "Меньше";
-        } else {
-            return "Угадал";
         }
+        return "Угадал";
     }
 
     public int getSecretNumber() {

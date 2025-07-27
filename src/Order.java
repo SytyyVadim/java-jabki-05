@@ -5,13 +5,11 @@ import java.util.UUID;
 public class Order {
 
     private final String orderId;
-    private final List<OrderItem> items;
+    private List<OrderItem> items = new ArrayList<>();
     private double totalPrice;
 
     public Order() {
         this.orderId = UUID.randomUUID().toString();
-        this.items = new ArrayList<>();
-        this.totalPrice = 0.0;
     }
 
     public String getOrderId() {
@@ -38,7 +36,7 @@ public class Order {
         sb.append("Order ID: ").append(orderId).append("\n");
         sb.append("Items:\n");
         for (OrderItem item : items) {
-            sb.append("- ").append(item.getName()).append(" (").append(item.getPrice()).append(")\n");
+            String.format("- %s (%.2f ₽)%n", item.getName(), item.getPrice());
         }
         sb.append("Total Price: ").append(totalPrice).append("\n");
         return sb.toString();
